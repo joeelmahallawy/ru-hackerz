@@ -6,5 +6,11 @@ const theme = extendTheme({
     links: "sans-serif",
     heading: "Orbitron",
   },
+  headings: {
+    textAlign: "center",
+    fontFamily: "Orbitron",
+    fontSize: "5xl",
+    color: "white",
+  },
 });
 export default theme;
