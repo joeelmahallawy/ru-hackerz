@@ -738,10 +738,20 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fontsource/geostar-fill@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/geostar-fill/-/geostar-fill-4.5.0.tgz#c88f098e51283f94cf8758b1d6e50b9d9e2c9c1d"
+  integrity sha512-sAA19HJea1He8w8MScaWmn8KB15A9ua1hDrrLEW3NELzk0K6E1nniG8IhikO1kugA97bMtMzPK5ojNndxHDyrA==
+
 "@fontsource/open-sans@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.0.tgz#e6d05dfdfe74580001010302f9c418067b45a6a9"
   integrity sha512-49+A0IkTTv3cpS1YecrZNCqvlVTThUt/qioiAIZsXfgC3TqavgRqwXXvroXmhVeP/f0sqZw5CRDMS1Hj4aSTbQ==
+
+"@fontsource/orbitron@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/orbitron/-/orbitron-4.5.0.tgz#09f728fe745d44893feea1ed9d16b8b7b4826766"
+  integrity sha512-fcB9pDro7hVYPpZ1lJxMzd8A5FVM2ErvKST2+239OcoSZ8o15sKfKIjV2TmvhHzqhFScwEBAZrQkSk7V1G1szw==
 
 "@fontsource/raleway@^4.5.0":
   version "4.5.0"
@@ -2486,6 +2496,11 @@ react-focus-lock@2.5.0:
     react-clientside-effect "^1.2.2"
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@17.0.2:
   version "17.0.2"
