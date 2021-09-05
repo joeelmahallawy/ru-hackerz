@@ -5,6 +5,7 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   ListItem,
   Text,
   UnorderedList,
@@ -17,6 +18,8 @@ import theme from "../themes/theme";
 import { IoArrowDown } from "react-icons/io5";
 import ScrollDown from "../components/scrollDown";
 import NavLinks from "../components/navLinks";
+import myWashingtonPic from "../images/washington_pic.jpeg";
+import { Icon } from "@iconify/react";
 
 const IndexPage = () => {
   return (
@@ -100,20 +103,51 @@ const IndexPage = () => {
           </Flex>
         </Center>
       </Box>
-
-      <Box h="100vh" id="about-the-team">
-        <Center w="100%" h="10%" flexDir="column" pt={5}>
-          <Heading
-            {...theme.headings}
-            // mb={10}
-            borderBottom="1px solid white"
-          >
+      <Box id="about-the-team">
+        <Center pt={5}>
+          <Heading {...theme.headings} borderBottom="1px solid white">
             About the team
           </Heading>
         </Center>
-        <Box>
-          <Heading>hi</Heading>
-        </Box>
+        <Flex h="90%" m="0 auto" p={10}>
+          <Box w="40%">
+            <Image src={myWashingtonPic.src} />
+          </Box>
+          <Center m="0 auto" flexDir="column" w="50%">
+            <Box bg="gray.800" p={3}>
+              <Heading
+                color="white"
+                textAlign="center"
+                mb={5}
+                fontFamily={theme.fonts.heading}
+              >
+                Youssef El Mahallawy
+              </Heading>
+              <Flex>
+                <Icon icon="emojione:waving-hand" fontSize="30" />
+
+                <Text color="white" fontSize="md">
+                  {" "}
+                  Hey I'm Youssef, a third year software engineering student. I
+                  like solving problems and building projects! I learned
+                  Javascript over the summer and started building some simple
+                  projects for people to use,{" "}
+                  <Link
+                    _focus={{ outline: "none" }}
+                    color="blue.400"
+                    href="https://tzcities.vercel.app/"
+                    isExternal={true}
+                  >
+                    check it out!
+                  </Link>{" "}
+                  I'm excited for this group because I believe it's a great way
+                  to connect with other amazing people who want to learn the
+                  same skill as you!
+                </Text>
+              </Flex>
+            </Box>
+          </Center>
+        </Flex>
       </Box>
     </Box>
   );
