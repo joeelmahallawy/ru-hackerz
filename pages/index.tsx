@@ -20,6 +20,7 @@ import ScrollDown from "../components/scrollDown";
 import NavLinks from "../components/navLinks";
 import myWashingtonPic from "../images/washington_pic.jpeg";
 import { Icon } from "@iconify/react";
+import YasminDP from "../images/Yasmin-Modarai-pic.jpeg";
 
 const IndexPage = () => {
   return (
@@ -124,9 +125,11 @@ const IndexPage = () => {
                 Youssef El Mahallawy
               </Heading>
               <Flex>
-                <Icon icon="emojione:waving-hand" fontSize="30" />
+                <Box m="0 auto auto 0">
+                  <Icon icon="emojione:waving-hand" fontSize="22.5" />
+                </Box>
 
-                <Text color="white" fontSize="md">
+                <Text color="white" fontSize="md" ml={1}>
                   {" "}
                   Hey I'm Youssef, a third year software engineering student. I
                   like solving problems and building projects! I learned
@@ -141,12 +144,39 @@ const IndexPage = () => {
                     check it out!
                   </Link>{" "}
                   I'm excited for this group because I believe it's a great way
-                  to connect with other amazing people who want to learn the
-                  same skill as you!
+                  to connect with and meet other amazing people who are
+                  interested in proramming!
                 </Text>
               </Flex>
             </Box>
           </Center>
+        </Flex>
+        {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
+        <Flex h="90%" m="0 auto" p={10}>
+          <Center m="0 auto" flexDir="column" w="50%">
+            <Box bg="gray.800" p={3}>
+              <Heading
+                color="white"
+                textAlign="center"
+                mb={5}
+                fontFamily={theme.fonts.heading}
+              >
+                Yasmin Modarai
+              </Heading>
+              <Flex>
+                <Text color="white" fontSize="md" ml={1}>
+                  Hi I’m Yasmin Modarai and I’m going into my third year of
+                  Software Engineering. I joined RU Hackerz because I want to
+                  help others learn to program and build cool projects in a
+                  welcoming environment. A fun fact about me is that I’m
+                  currently a black belt in karate
+                </Text>
+              </Flex>
+            </Box>
+          </Center>
+          <Box w="30%">
+            <Image src={YasminDP.src} />
+          </Box>
         </Flex>
       </Box>
     </Box>
