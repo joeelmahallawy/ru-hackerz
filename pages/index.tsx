@@ -10,7 +10,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import backgroundImg from "../images/background-ruhackerz.jpeg";
 import groupCodingImg from "../images/group-coding.jpeg";
 import productHuntImg from "../images/producthunt-image.png";
@@ -21,8 +21,37 @@ import NavLinks from "../components/navLinks";
 import myWashingtonPic from "../images/washington_pic.jpeg";
 import { Icon } from "@iconify/react";
 import YasminDP from "../images/Yasmin-Modarai-pic.jpeg";
+import { useUpdate } from "react-use";
 
 const IndexPage = () => {
+  const updateMe = useUpdate();
+  useEffect(() => {
+    console.log("USEEFFECT");
+    updateMe();
+  }, []);
+  const homePage = useRef();
+  const ourGoal = useRef();
+  const ourTeam = useRef();
+  const nav = useRef();
+  const [showSticky, setShowSticky] = useState(false);
+
+  if (process.browser) {
+    window.onscroll = () => {
+      if (
+        window.scrollY >
+        // @ts-expect-error
+        ourGoal.current?.getBoundingClientRect().top +
+          window.pageYOffset -
+          // @ts-expect-error
+          nav.current.getBoundingClientRect().height / 2
+      )
+        setShowSticky(true);
+      else {
+        setShowSticky(false);
+      }
+    };
+  }
+
   return (
     <Box
       bgImage={backgroundImg.src}
@@ -30,8 +59,10 @@ const IndexPage = () => {
       bgSize="cover"
       backgroundRepeat="no-repeat"
       bgAttachment="fixed"
+      h="100%"
     >
       <Box
+        ref={homePage}
         id="body"
         h="100vh"
         w="100vw"
@@ -44,11 +75,17 @@ const IndexPage = () => {
           w="100%"
           p={12}
           h="10%"
+          ref={nav}
+          bg={showSticky && "rgb(0,0,0,0.55)"}
+          pos={process.browser && showSticky ? "fixed" : "unset"}
+          top="0px"
         >
-          <NavLinks type={"Home"} />
-          <NavLinks type={"Our goal"} />
-          <NavLinks type={"About the team"} />
-          <NavLinks type={"Constitution"} />
+          <Flex p={5}>
+            <NavLinks type={"Home"} button={homePage} />
+            <NavLinks type={"Our goal"} button={ourGoal} />
+            <NavLinks type={"About the team"} button={ourTeam} />
+            <NavLinks type={"Constitution & activities"} />
+          </Flex>
         </Flex>
         <Center h="80%" w="100%">
           <Heading
@@ -61,11 +98,11 @@ const IndexPage = () => {
             RU Hackerz
           </Heading>
         </Center>
-        <Center h="10%" pb={20}>
+        <Center h="10%" pb={10}>
           <ScrollDown />
         </Center>
       </Box>
-      <Box id="our-goal" h="100vh">
+      <Box id="our-goal" ref={ourGoal}>
         <Center bg="gray.800" h="100%" w="100%" flexDir="column" pt={5}>
           <Box>
             <Heading mt={5} {...theme.headings} borderBottom="1px solid white">
@@ -104,15 +141,18 @@ const IndexPage = () => {
           </Flex>
         </Center>
       </Box>
-      <Box id="about-the-team">
+      <Box id="about-the-team" ref={ourTeam}>
         <Center pt={5}>
           <Heading {...theme.headings} borderBottom="1px solid white">
             About the team
           </Heading>
         </Center>
-        <Flex h="90%" m="0 auto" p={10}>
+        <Flex h="90%" m="0 auto" p={20}>
           <Box w="40%">
-            <Image src={myWashingtonPic.src} />
+            <Image
+              //  filter="blur(20px)"
+              src={myWashingtonPic.src}
+            />
           </Box>
           <Center m="0 auto" flexDir="column" w="50%">
             <Box bg="gray.800" p={3}>
@@ -152,7 +192,7 @@ const IndexPage = () => {
           </Center>
         </Flex>
         {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
-        <Flex h="90%" m="0 auto" p={10}>
+        <Flex h="90%" m="0 auto" p={10} pr={40}>
           <Center m="0 auto" flexDir="column" w="50%">
             <Box bg="gray.800" p={3}>
               <Heading
@@ -179,6 +219,24 @@ const IndexPage = () => {
           </Box>
         </Flex>
       </Box>
+      <Center h="50vh" id="sign-up">
+        <Button
+          size="lg"
+          colorScheme="orange"
+          fontSize="175%"
+          p="2.5%"
+          _hover={{ p: "2.75%", fontSize: "200%", bg: "orange.600" }}
+        >
+          <Link
+            _hover={{ borderBottom: "0px" }}
+            _focus={{ outline: "none" }}
+            isExternal={true}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe33qTD56JENzFOfXbLgpuytILTjabY0ZF5UTcPcagr6nOmwQ/viewform"
+          >
+            Sign up!
+          </Link>
+        </Button>
+      </Center>
     </Box>
   );
 };

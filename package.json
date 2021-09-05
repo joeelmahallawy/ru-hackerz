@@ -18,6 +18,7 @@
     "@fontsource/orbitron": "^4.5.0",
     "@fontsource/raleway": "^4.5.0",
     "@iconify/react": "^3.0.1",
+    "@reach/router": "^1.3.4",
     "aphrodite": "^2.4.0",
     "framer-motion": "^4",
     "next": "latest",
@@ -26,7 +27,10 @@
     "react-animations": "^1.0.0",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-pdf": "^5.3.2",
     "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.3.0",
+    "react-use": "^17.3.1",
     "styled-components": "^5.3.1"
   },
   "devDependencies": {

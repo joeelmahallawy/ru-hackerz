@@ -1,14 +1,19 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import IndexPage from "../pages";
+import Constitution from "../pages/constitution";
+// import { Link as ReachLink } from "@reach/router";
+import Link from "next/link";
 
-const navLinks = ({ type }) => {
-  return (
+const navLinks = ({ type, button = {} }) => {
+  return type != "Constitution & activities" ? (
     <Button
-      fontSize="lg"
+      fontSize={["sm", "md", "lg", "xl", "xl"]}
       borderRadius="0"
       color="white"
       p={2}
-      mr={5}
+      mr={[1, 1, 3, 4, 5]}
       bg="transparent"
       _focus={{ outline: "none" }}
       _active={{ bg: "none" }}
@@ -18,9 +23,45 @@ const navLinks = ({ type }) => {
         fontSize: "xl",
         borderBottom: "1px solid white",
       }}
+      onClick={() => {
+        if (type != "Constitution") {
+          if (process.browser) {
+            window.scrollTo({
+              left: 0,
+              top:
+                // @ts-expect-error
+                button.current?.getBoundingClientRect().top +
+                window.pageYOffset,
+              behavior: "smooth",
+            });
+          }
+        }
+      }}
     >
       {type}
     </Button>
+  ) : (
+    <Link href="/constitution">
+      <Button
+        fontSize={["sm", "md", "lg", "xl", "xl"]}
+        borderRadius="0"
+        color="white"
+        p={1}
+        fontWeight="600"
+        mr={[1, 1, 3, 4, 5]}
+        bg="transparent"
+        _focus={{ outline: "none" }}
+        _active={{ bg: "none" }}
+        _hover={{
+          color: "gray.400",
+          bg: "none",
+          fontSize: "xl",
+          borderBottom: "1px solid white",
+        }}
+      >
+        {type}
+      </Button>
+    </Link>
   );
 };
 export default navLinks;
