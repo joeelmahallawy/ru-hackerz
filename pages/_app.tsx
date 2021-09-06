@@ -8,7 +8,7 @@ import { createSEOConfig } from "../utils/seoMeta";
 class MyApp extends App {
   async componentDidMount() {
     if (process.env.NODE_ENV === "production") {
-      ReactGA.initialize("UA-203142465-2");
+      ReactGA.initialize("UA-206784319-1");
 
       this.logPageView();
     }
