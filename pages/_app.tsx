@@ -35,7 +35,7 @@ class MyApp extends App {
           <link
             rel="icon"
             sizes="16x16"
-            href="../public/ru-hackerz-transparent-logo.ico"
+            href="../icons/ru-hackerz-transparent-logo.ico"
           />
         </Head>
         <ChakraProvider theme={theme}>
