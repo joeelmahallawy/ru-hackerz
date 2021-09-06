@@ -4,7 +4,7 @@ const config: Config = {
   author: "Youssef El Mahallawy",
   siteName: "RU Hackerz Homepage",
   siteDescription:
-    "RU Hackerz homepage for members to see our goals and objectives!",
+    "RU Hackerz central hub to inform about our goals as a group!",
   defaultPageTitle: "RU Hackerz",
   blogTitle: "Homepage",
   baseUrl: "ru-hackerz.vercel.app",
