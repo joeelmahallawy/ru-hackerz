@@ -324,24 +324,29 @@ const IndexPage = () => {
         {/* FIXME:FIXME: */}
         {/* FIXME:FIXME: */}
         {/*  */}
-        <Center id="marvy-and-kiro" justifyContent="center" w="100%">
+        <Center
+          id="marvy-and-kiro"
+          justifyContent="center"
+          w="100%"
+          // bg="blue"
+          p={10}
+        >
           <Box
             display={["block", "block", "block", "flex", "flex"]}
-            gridGap={["10%", "50%", "40%", "17.5%", "20%"]}
-            w={["100%", "90%", "80%", "75%", "75%"]}
-            p={10}
+            // gridGap={["0%", "0%", "0%", "17.5%", "20%"]}
+            w={["100%", "90%", "85%", "85%", "85%"]}
           >
             <Bounce left>
               <Flex
-                mt={["20%", "15%", "10%", "5%", "5%"]}
+                mt={["15%", "10%", "5%", "0%", "0%"]}
                 id="kiro-profile"
-                w="500px"
+                w="110%"
                 flexDir="column"
               >
-                <Box w="100%">
-                  <Image w="100%" h="100%" src={KiroDP.src} />
+                <Box>
+                  <Image fit="cover" src={KiroDP.src} />
                 </Box>
-                <Box w="100%" bg="gray.800" p={3}>
+                <Box bg="gray.800" p={5}>
                   <Flex>
                     <Heading
                       color="white"
@@ -369,17 +374,19 @@ const IndexPage = () => {
               </Flex>
             </Bounce>
             {/* FIXME:FIXME:FIXME:FIXME: */}
+            {/* FIXME:FIXME:FIXME:FIXME: */}
             <Bounce right>
               <Flex
-                mt={["20%", "15%", "10%", "5%", "5%"]}
+                mt={["15%", "10%", "5%", "0%", "0%"]}
                 id="marvy-profile"
-                w="500px"
+                ml="auto"
+                w="70%"
                 flexDir="column"
               >
-                <Box w="100%">
-                  <Image h="100%" fit="fill" w="100%" src={MarvyDP.src} />
+                <Box>
+                  <Image src={MarvyDP.src} />
                 </Box>
-                <Box bg="gray.800" w="100%" p={3}>
+                <Box bg="gray.800" w="100%" p={5}>
                   <Center>
                     <Heading
                       color="white"
