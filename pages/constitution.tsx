@@ -77,13 +77,13 @@ const Constitution = () => {
         {/* FIXME:FIXME:FXIME:FIXME:FIXME:FIXME:FIXME: */}
         <Center flexDir="column" w="100%" id="activity-sheet">
           <object
-            data="http://www.keepandshare.com/doc2/view.php?id=120150&da=y"
+            data="https://www.keepandshare.com/doc2/120150/ru-hackerz-activity-sheet-pdf-70k?da=y"
             type="application/pdf"
             width="500"
             height="700"
           >
             <iframe
-              src="http://www.keepandshare.com/doc2/view.php?id=120150&da=y"
+              src="https://www.keepandshare.com/doc2/120150/ru-hackerz-activity-sheet-pdf-70k?da=y"
               width="500"
               height="700"
             ></iframe>
