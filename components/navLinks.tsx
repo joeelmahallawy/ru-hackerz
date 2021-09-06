@@ -9,10 +9,10 @@ import Link from "next/link";
 const navLinks = ({ type, button = {} }) => {
   return type != "Constitution & activities" ? (
     <Button
-      fontSize={["sm", "md", "lg", "xl", "xl"]}
+      fontSize={["70%", "md", "lg", "xl", "xl"]}
       borderRadius="0"
       color="white"
-      p={2}
+      p={[1, 1, 2, 3, 4]}
       mr={[1, 1, 3, 4, 5]}
       bg="transparent"
       _focus={{ outline: "none" }}
@@ -20,7 +20,6 @@ const navLinks = ({ type, button = {} }) => {
       _hover={{
         color: "gray.400",
         bg: "none",
-        fontSize: "xl",
         borderBottom: "1px solid white",
       }}
       onClick={() => {
@@ -43,12 +42,12 @@ const navLinks = ({ type, button = {} }) => {
   ) : (
     <Link href="/constitution">
       <Button
-        fontSize={["sm", "md", "lg", "xl", "xl"]}
+        fontSize={["70%", "md", "lg", "xl", "xl"]}
         borderRadius="0"
         color="white"
-        p={1}
         fontWeight="600"
         mr={[1, 1, 3, 4, 5]}
+        p={0}
         bg="transparent"
         _focus={{ outline: "none" }}
         _active={{ bg: "none" }}

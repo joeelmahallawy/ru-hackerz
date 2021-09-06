@@ -1,4 +1,4 @@
-import { Link, Center } from "@chakra-ui/react";
+import { Link, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FaAngellist } from "react-icons/fa";
@@ -8,7 +8,7 @@ const renderSocialMediaButtons = (
   gitHub: string,
   angelList = ""
 ) => (
-  <>
+  <Center>
     <Link
       _focus={{ outline: "none" }}
       isExternal={true}
@@ -59,7 +59,7 @@ const renderSocialMediaButtons = (
         </Center>
       </Link>
     )}
-  </>
+  </Center>
 );
 
 export default renderSocialMediaButtons;

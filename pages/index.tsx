@@ -80,11 +80,17 @@ const IndexPage = () => {
           bgGradient="linear(to-b, rgb(0,0,0,.75),rgb(255,255,255,0))"
         >
           <Flex
-            justifyContent="flex-end"
+            justifyContent={[
+              "center",
+              "flex-end",
+              "flex-end",
+              "flex-end",
+              "flex-end",
+            ]}
             alignItems="center"
             id="nav-bar"
             w="100%"
-            p={12}
+            p={[2, 4, 6, 9, 12]}
             h="10%"
             ref={nav}
             bg={showSticky && "rgb(0,0,0,0.55)"}
@@ -92,7 +98,7 @@ const IndexPage = () => {
             top="0px"
             zIndex="999"
           >
-            <Flex p={5}>
+            <Flex p={[1, 2, 3, 4, 5]}>
               <NavLinks type={"Home"} button={homePage} />
               <NavLinks type={"Our goal"} button={ourGoal} />
               <NavLinks type={"About the team"} button={ourTeam} />
@@ -102,7 +108,7 @@ const IndexPage = () => {
           <Center h="80%" w="100%">
             <Heading
               fontFamily={theme.fonts.heading}
-              fontSize="6xl"
+              fontSize={["2xl", "3xl", "4xl", "5xl", "6xl"]}
               color="white"
               bgGradient="linear(to-r, orange.500,blue.500)"
               bgClip="text"
@@ -126,8 +132,11 @@ const IndexPage = () => {
                   Our Goal
                 </Heading>
               </Box>
-              <Flex maxW="85%">
-                <Box mt={3} ml={10} w="60%">
+              <Box
+                display={["block", "block", "block", "flex", "flex"]}
+                maxW="85%"
+              >
+                <Box mt={3} ml={10} w={["80%", "80%", "80%", "70%", "60%"]}>
                   <Image src={groupCodingImg.src} />
                 </Box>
                 <Center w="100%" p="7.5%" textAlign="center">
@@ -141,8 +150,11 @@ const IndexPage = () => {
                     concept.
                   </Text>
                 </Center>
-              </Flex>
-              <Flex maxW="85%">
+              </Box>
+              <Box
+                display={["block", "block", "block", "flex", "flex"]}
+                maxW="85%"
+              >
                 <Center w="100%" p="7.5%" textAlign="center">
                   <Text color="white" fontSize="lg">
                     Build, Push, Deploy - This is our motto here at RU Hackerz.
@@ -157,7 +169,7 @@ const IndexPage = () => {
                 <Box ml={10} w="75%">
                   <Image src={productHuntImg.src} />
                 </Box>
-              </Flex>
+              </Box>
             </Center>
           </Box>
         </Bounce>
@@ -168,16 +180,24 @@ const IndexPage = () => {
             </Heading>
           </Center>
           <Roll left>
-            <Flex id="youssef-profile" h="90%" m="0 auto" p={20}>
-              <Box w="40%">
-                <Image
-                  //  filter="blur(20px)"
-                  src={myWashingtonPic.src}
-                />
-              </Box>
+            <Box
+              display={["block", "block", "block", "flex", "flex"]}
+              id="youssef-profile"
+              h="90%"
+              m="0 auto"
+              p={20}
+            >
+              <Center w={["100%", "100%", "100%", "45%", "40%"]}>
+                <Image src={myWashingtonPic.src} />
+              </Center>
+
               <Center m="0 auto" flexDir="column" w="50%">
-                <Box bg="gray.800" p={3}>
-                  <Flex>
+                <Box
+                  bg="gray.800"
+                  w={["240%", "200%", "200%", "90%", "100%"]}
+                  p={3}
+                >
+                  <Box display={["block", "block", "flex", "flex", "flex"]}>
                     <Heading
                       color="white"
                       textAlign="center"
@@ -191,7 +211,7 @@ const IndexPage = () => {
                       "joeelmahallawy",
                       "youssef-el-mahallawy"
                     )}
-                  </Flex>
+                  </Box>
                   <Flex>
                     <Box m="0 auto auto 0">
                       <Icon icon="emojione:waving-hand" fontSize="22.5" />
@@ -218,13 +238,25 @@ const IndexPage = () => {
                   </Flex>
                 </Box>
               </Center>
-            </Flex>
+            </Box>
           </Roll>
           {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
           <Roll right>
-            <Flex id="yasmin-profile" h="90%" m="0 auto" p={10} pr={40}>
-              <Center m="0 auto" flexDir="column" w="50%">
-                <Box bg="gray.800" p={3}>
+            <Box
+              display={["block", "block", "block", "flex", "flex"]}
+              id="yasmin-profile"
+              h="90%"
+              m="auto auto"
+              p={10}
+              pr={40}
+              justifyContent="space-evenly"
+            >
+              <Flex m="auto 0" flexDir="column" w="50%">
+                <Box
+                  w={["350%", "275%", "200%", "90%", "100%"]}
+                  bg="gray.800"
+                  p={3}
+                >
                   <Flex>
                     <Heading
                       color="white"
@@ -245,25 +277,35 @@ const IndexPage = () => {
                       Software Engineering. I joined RU Hackerz because I want
                       to help others learn to program and build cool projects in
                       a welcoming environment. A fun fact about me is that I’m
-                      currently a black belt in karate
+                      currently a black belt in karate!
                     </Text>
                   </Flex>
                 </Box>
-              </Center>
-              <Box w="30%">
+              </Flex>
+              <Center w={["175%", "137.5%", "100%", "45%", "35%"]}>
                 <Image src={YasminDP.src} />
-              </Box>
-            </Flex>
+              </Center>
+            </Box>
           </Roll>
         </Box>
         {/* FIXME:FIXME: */}
         {/* FIXME:FIXME: */}
         {/*  */}
         <Center id="marvy-and-kiro" justifyContent="center" w="100%">
-          <Flex gridGap="20%" w="70%" p={20}>
+          <Box
+            display={["block", "block", "block", "flex", "flex"]}
+            gridGap={["10%", "50%", "40%", "17.5%", "15%"]}
+            w={["100%", "90%", "80%", "75%", "75%"]}
+            p={10}
+          >
             <Bounce left>
-              <Flex id="kiro-profile" w="100%" flexDir="column">
-                <Box>
+              <Flex
+                mt={["20%", "15%", "10%", "5%", "5%"]}
+                id="kiro-profile"
+                w="100%"
+                flexDir="column"
+              >
+                <Box w="100%">
                   <Image w="100%" h="100%" src={dummyImage.src} />
                 </Box>
                 <Box bg="gray.800" p={3}>
@@ -280,8 +322,14 @@ const IndexPage = () => {
                 </Box>
               </Flex>
             </Bounce>
+            {/* FIXME:FIXME:FIXME:FIXME: */}
             <Bounce right>
-              <Flex id="marvy-profile" w="100%" flexDir="column">
+              <Flex
+                mt={["20%", "15%", "10%", "5%", "5%"]}
+                id="marvy-profile"
+                w="100%"
+                flexDir="column"
+              >
                 <Box w="100%">
                   <Image h="100%" w="100%" src={dummyImage.src} />
                 </Box>
@@ -299,7 +347,7 @@ const IndexPage = () => {
                 </Box>
               </Flex>
             </Bounce>
-          </Flex>
+          </Box>
         </Center>
         {/* FIXME:FIXME: */}
         {/* FIXME:FIXME: */}
@@ -309,7 +357,7 @@ const IndexPage = () => {
               size="lg"
               colorScheme="orange"
               fontSize="175%"
-              p="2.5%"
+              p={["5%", "4%", "3.5%", "3%", "2.5%"]}
               _hover={{ p: "2.75%", fontSize: "200%", bg: "orange.600" }}
             >
               <Link
@@ -325,8 +373,8 @@ const IndexPage = () => {
         </Fade>
 
         <Box w="100%" id="footer" bg="gray.900">
-          <Center h="100px">
-            <Flex gridGap="10">
+          <Center h="100px" bg="red">
+            <Flex gridGap={[20, 10, 10, 10, 10]} bg="blue">
               <Box _hover={{ cursor: "pointer" }} onClick={sendMail}>
                 <FcGoogle size="40" />
               </Box>
