@@ -9,7 +9,6 @@ class MyApp extends App {
   async componentDidMount() {
     if (process.env.NODE_ENV === "production") {
       ReactGA.initialize("UA-206784319-1");
-
       this.logPageView();
     }
   }
@@ -33,10 +32,6 @@ class MyApp extends App {
       <>
         <Head>
           <meta name="viewport" content="width=device-width" />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-5LBJ3L48MX"
-          ></script>
         </Head>
         <ChakraProvider theme={theme}>
           <DefaultSeo {...createSEOConfig()} />
