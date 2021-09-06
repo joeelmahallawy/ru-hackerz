@@ -39,7 +39,6 @@ const IndexPage = () => {
   const ourTeam = useRef();
   const nav = useRef();
   const [showSticky, setShowSticky] = useState(false);
-  const { isOpen, onToggle } = useDisclosure();
 
   if (process.browser) {
     window.onscroll = () => {
@@ -51,7 +50,6 @@ const IndexPage = () => {
           // @ts-expect-error
           nav.current?.getBoundingClientRect().height / 2
       ) {
-        onToggle();
         setShowSticky(true);
       } else {
         setShowSticky(false);
@@ -62,7 +60,7 @@ const IndexPage = () => {
   return (
     <>
       <Head>
-        <link rel="icon" sizes="16x16" href="../images/ruhackerz-logo.ico" />
+        <link rel="icon" sizes="16x16" href="../icons/ruhackerz-logo.ico" />
         <title>RU Hackerz Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
