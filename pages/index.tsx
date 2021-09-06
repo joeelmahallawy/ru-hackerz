@@ -28,6 +28,8 @@ import { FcGoogle } from "react-icons/fc";
 import { Bounce, Roll, Fade } from "react-reveal";
 import Head from "next/head";
 import dummyImage from "../images/dummyImg.jpeg";
+import RUHackerzImg from "../public/icons/ruhackerz-logo.ico";
+import RUTransparent from "../public/icons/ru-full-transparent-logo.ico";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -98,6 +100,15 @@ const IndexPage = () => {
             top="0px"
             zIndex="999"
           >
+            <Box mr="auto" h="100px" borderRadius="60%">
+              <Image
+                w="100%"
+                h="100%"
+                fit="contain"
+                borderRadius="50%"
+                src={RUTransparent.src}
+              />{" "}
+            </Box>
             <Flex p={[1, 2, 3, 4, 5]}>
               <NavLinks type={"Home"} button={homePage} />
               <NavLinks type={"Our goal"} button={ourGoal} />
@@ -377,8 +388,8 @@ const IndexPage = () => {
         </Fade>
 
         <Box w="100%" id="footer" bg="gray.900">
-          <Center h="100px" bg="red">
-            <Flex gridGap={[20, 10, 10, 10, 10]} bg="blue">
+          <Center h="100px">
+            <Flex gridGap={[20, 10, 10, 10, 10]}>
               <Box _hover={{ cursor: "pointer" }} onClick={sendMail}>
                 <FcGoogle size="40" />
               </Box>
