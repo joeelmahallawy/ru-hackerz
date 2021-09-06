@@ -356,9 +356,13 @@ const IndexPage = () => {
             <Button
               size="lg"
               colorScheme="orange"
-              fontSize="175%"
-              p={["5%", "4%", "3.5%", "3%", "2.5%"]}
-              _hover={{ p: "2.75%", fontSize: "200%", bg: "orange.600" }}
+              fontSize={["215%", "200%", "190%", "182.5%", "175%"]}
+              p={["6%", "5.5%", "3.5%", "3%", "2%"]}
+              _hover={{
+                p: ["6.25%", "5.75%", "3.75%", "3.25%", "2.25%"],
+                fontSize: ["225%", "210%", "200%", "192.5%", "185%"],
+                bg: "orange.600",
+              }}
             >
               <Link
                 _hover={{ borderBottom: "0px" }}
