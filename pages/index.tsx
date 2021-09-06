@@ -7,19 +7,14 @@ import {
   Heading,
   Image,
   Link,
-  ListItem,
-  SlideFade,
   Text,
-  UnorderedList,
   useDisclosure,
 } from "@chakra-ui/react";
-import link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import backgroundImg from "../images/background-ruhackerz.jpeg";
 import groupCodingImg from "../images/group-coding.jpeg";
 import productHuntImg from "../images/producthunt-image.png";
 import theme from "../themes/theme";
-import { IoArrowDown } from "react-icons/io5";
 import ScrollDown from "../components/scrollDown";
 import NavLinks from "../components/navLinks";
 import myWashingtonPic from "../images/washington_pic.jpeg";
@@ -27,13 +22,12 @@ import { Icon } from "@iconify/react";
 import YasminDP from "../images/Yasmin-Modarai-pic.jpeg";
 import { useUpdate } from "react-use";
 import { GrInstagram } from "react-icons/gr";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { FaAngellist } from "react-icons/fa";
 import renderSocialMediaButtons from "../components/renderSocialMediaButtons";
 import sendMail from "../helpers/mailTo";
 import { FcGoogle } from "react-icons/fc";
 import { Bounce, Roll, Fade } from "react-reveal";
 import Head from "next/head";
+import dummyImage from "../images/dummyImg.jpeg";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -264,6 +258,53 @@ const IndexPage = () => {
             </Flex>
           </Roll>
         </Box>
+        {/* FIXME:FIXME: */}
+        {/* FIXME:FIXME: */}
+        {/*  */}
+        <Center id="marvy-and-kiro" justifyContent="center" w="100%">
+          <Flex gridGap="20%" w="70%" p={20}>
+            <Bounce left>
+              <Flex id="kiro-profile" w="100%" flexDir="column">
+                <Box>
+                  <Image w="100%" h="100%" src={dummyImage.src} />
+                </Box>
+                <Box bg="gray.800" p={3}>
+                  <Text fontSize="md" color="white">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum."
+                  </Text>
+                </Box>
+              </Flex>
+            </Bounce>
+            <Bounce right>
+              <Flex id="marvy-profile" w="100%" flexDir="column">
+                <Box w="100%">
+                  <Image h="100%" w="100%" src={dummyImage.src} />
+                </Box>
+                <Box bg="gray.800" p={3}>
+                  <Text color="white">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum."
+                  </Text>
+                </Box>
+              </Flex>
+            </Bounce>
+          </Flex>
+        </Center>
+        {/* FIXME:FIXME: */}
+        {/* FIXME:FIXME: */}
         <Fade bottom>
           <Center h="50vh" id="sign-up">
             <Button
@@ -284,6 +325,7 @@ const IndexPage = () => {
             </Button>
           </Center>
         </Fade>
+
         <Box w="100%" id="footer" bg="gray.900">
           <Center h="100px">
             <Flex gridGap="10">
