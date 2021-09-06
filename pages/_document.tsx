@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <link
             rel="icon"
             sizes="16x16"
-            href="../public/icons/ru-hackerz-transparent-logo.ico"
+            href="../public/ru-hackerz-transparent-logo.ico"
           />
         </Head>
         <body>

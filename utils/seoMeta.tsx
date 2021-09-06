@@ -1,6 +1,4 @@
-import React from "react";
 import { BlogJsonLd, NextSeoProps } from "next-seo";
-import image from "../logoImage/clock-for-website.jpeg";
 import config from "../config/config";
 
 type DataType = {
