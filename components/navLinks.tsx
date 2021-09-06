@@ -1,9 +1,5 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import IndexPage from "../pages";
-import Constitution from "../pages/constitution";
-// import { Link as ReachLink } from "@reach/router";
 import Link from "next/link";
 
 const navLinks = ({ type, button = {} }) => {

@@ -29,6 +29,8 @@ import { Bounce, Roll, Fade } from "react-reveal";
 import Head from "next/head";
 import dummyImage from "../images/dummyImg.jpeg";
 import RUTransparent from "../public/icons/ru-hackerz-transparent-logo.ico";
+import KiroDP from "../images/Kirolos-Youssef-pic.png";
+import MarvyDP from "../images/Marvy-Shaker-pic.png";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -232,7 +234,7 @@ const IndexPage = () => {
                     <Heading
                       color="white"
                       textAlign="center"
-                      mb={5}
+                      p={3}
                       fontFamily={theme.fonts.heading}
                     >
                       Youssef El Mahallawy
@@ -292,7 +294,7 @@ const IndexPage = () => {
                     <Heading
                       color="white"
                       textAlign="center"
-                      mb={5}
+                      p={3}
                       fontFamily={theme.fonts.heading}
                     >
                       Yasmin Modarai
@@ -325,7 +327,7 @@ const IndexPage = () => {
         <Center id="marvy-and-kiro" justifyContent="center" w="100%">
           <Box
             display={["block", "block", "block", "flex", "flex"]}
-            gridGap={["10%", "50%", "40%", "17.5%", "15%"]}
+            gridGap={["10%", "50%", "40%", "17.5%", "20%"]}
             w={["100%", "90%", "80%", "75%", "75%"]}
             p={10}
           >
@@ -333,23 +335,36 @@ const IndexPage = () => {
               <Flex
                 mt={["20%", "15%", "10%", "5%", "5%"]}
                 id="kiro-profile"
-                w="100%"
+                w="500px"
                 flexDir="column"
               >
                 <Box w="100%">
-                  <Image w="100%" h="100%" src={dummyImage.src} />
+                  <Image w="100%" h="100%" src={KiroDP.src} />
                 </Box>
-                <Box bg="gray.800" p={3}>
-                  <Text fontSize="md" color="white">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
-                  </Text>
+                <Box w="100%" bg="gray.800" p={3}>
+                  <Flex>
+                    <Heading
+                      color="white"
+                      textAlign="center"
+                      p={3}
+                      fontFamily={theme.fonts.heading}
+                    >
+                      Kirolos Youssef
+                    </Heading>
+                    {renderSocialMediaButtons(
+                      "kirolos-youssef-850504131",
+                      "fluff905"
+                    )}
+                  </Flex>
+                  <Flex>
+                    <Text fontSize="md" color="white">
+                      Hey I’m Kiro a Computer Engineer in the making, Passionate
+                      about Cryptocurrency and advancements in AI. I’m excited
+                      for RU Hackerz because I look forward to meeting
+                      like-minded individuals that are looking to grow and share
+                      similar interests.
+                    </Text>
+                  </Flex>
                 </Box>
               </Flex>
             </Bounce>
@@ -358,30 +373,43 @@ const IndexPage = () => {
               <Flex
                 mt={["20%", "15%", "10%", "5%", "5%"]}
                 id="marvy-profile"
-                w="100%"
+                w="500px"
                 flexDir="column"
               >
                 <Box w="100%">
-                  <Image h="100%" w="100%" src={dummyImage.src} />
+                  <Image h="100%" fit="fill" w="100%" src={MarvyDP.src} />
                 </Box>
-                <Box bg="gray.800" p={3}>
+                <Box bg="gray.800" w="100%" p={3}>
+                  <Center>
+                    <Heading
+                      color="white"
+                      alignItems="center"
+                      textAlign="center"
+                      p={3}
+                      fontFamily={theme.fonts.heading}
+                    >
+                      Marvy Shaker
+                    </Heading>
+                    {renderSocialMediaButtons(
+                      "marvy-shaker-3b3473195",
+                      "marvyshaker"
+                    )}
+                  </Center>
                   <Text color="white">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
+                    Hi I’m Marvy and I’m in my third year of software
+                    engineering. I learned Python over the summer to get more
+                    involved with, and work on Machine learning projects. I am
+                    excited to be a part of RU Hackerz because I was able to
+                    grow my interest and love for coding through the help of my
+                    friends and colleagues. In this club I can do the same for
+                    others who are new to coding or who are interested in
+                    building new projects.
                   </Text>
                 </Box>
               </Flex>
             </Bounce>
           </Box>
         </Center>
-        {/* FIXME:FIXME: */}
-        {/* FIXME:FIXME: */}
         <Fade bottom>
           <Center h="50vh" id="sign-up">
             <Button

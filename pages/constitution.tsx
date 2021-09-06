@@ -8,7 +8,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import backgroundImg from "../images/background-ruhackerz.jpeg";
-import { Document, Page } from "react-pdf";
 import React, { useState } from "react";
 import theme from "../themes/theme";
 import { IoReturnUpBackOutline } from "react-icons/io5";
@@ -17,11 +16,6 @@ import { GrInstagram } from "react-icons/gr";
 import sendMail from "../helpers/mailTo";
 
 const Constitution = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
   return (
     <Center
       bgImage={backgroundImg.src}

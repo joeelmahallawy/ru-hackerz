@@ -1,5 +1,6 @@
 import image from "../images/ruhackerz-logo.png";
-const config = {
+import Config from "../interface/interfaces";
+const config: Config = {
   author: "Youssef El Mahallawy",
   siteName: "RU Hackerz Homepage",
   siteDescription:
