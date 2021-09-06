@@ -28,8 +28,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Bounce, Roll, Fade } from "react-reveal";
 import Head from "next/head";
 import dummyImage from "../images/dummyImg.jpeg";
-import RUHackerzImg from "../public/icons/ruhackerz-logo.ico";
-import RUTransparent from "../public/icons/ru-full-transparent-logo.ico";
+import RUTransparent from "../public/icons/ru-hackerz-transparent-logo.ico";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -100,7 +99,24 @@ const IndexPage = () => {
             top="0px"
             zIndex="999"
           >
-            <Box mr="auto" h="100px" borderRadius="60%">
+            <Box
+              mr="auto"
+              h="80px"
+              _hover={{ cursor: "pointer" }}
+              onClick={() => {
+                if (process.browser) {
+                  window.scrollTo({
+                    left: 0,
+                    top:
+                      // @ts-expect-error
+                      homePage.current?.getBoundingClientRect().top +
+                      window.pageYOffset,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              borderRadius="60%"
+            >
               <Image
                 w="100%"
                 h="100%"
