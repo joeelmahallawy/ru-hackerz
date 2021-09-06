@@ -61,7 +61,11 @@ const IndexPage = () => {
   return (
     <>
       <Head>
-        <link rel="icon" sizes="16x16" href="../icons/ruhackerz-logo.ico" />
+        <link
+          rel="icon"
+          sizes="16x16"
+          href="../public/icons/ru-hackerz-transparent-logo.ico"
+        />
         <title>RU Hackerz Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

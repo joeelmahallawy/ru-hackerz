@@ -15,7 +15,11 @@ class MyDocument extends Document {
         <Head>
           {/* <title>RU Hackerz</title> */}
 
-          <link rel="icon" sizes="16x16" href="../icons/ruhackerz-logo.ico" />
+          <link
+            rel="icon"
+            sizes="16x16"
+            href="../public/icons/ru-hackerz-transparent-logo.ico"
+          />
         </Head>
         <body>
           <Main />
