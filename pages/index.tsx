@@ -179,8 +179,8 @@ const IndexPage = () => {
                     in computer programming! Learning programming alone is hard
                     - we believe that collaborative learning gives members a
                     chance to demonstrate their understanding by helping fellow
-                    members solve a certain problem or even understand a certain
-                    concept.
+                    members develop problem solving skills or understand
+                    difficult concepts.
                   </Text>
                 </Center>
               </Box>
@@ -190,7 +190,7 @@ const IndexPage = () => {
               >
                 <Center w="100%" p="7.5%" textAlign="center">
                   <Text color="white" fontSize="lg">
-                    Build, Push, Deploy - This is our motto here at RU Hackerz.
+                    Build, Push, Deploy - That is our motto here at RU Hackerz.
                     Our #1 objective is to have members hit the ground running
                     by deploying several projects. We think that the best way of
                     learning the sport is by playing the sport! Members will
@@ -341,6 +341,7 @@ const IndexPage = () => {
                 mt={["15%", "10%", "5%", "0%", "0%"]}
                 id="kiro-profile"
                 w="110%"
+                // w={["95%", "85%", "80%", "75%", "70%"]}
                 flexDir="column"
               >
                 <Box>
@@ -358,13 +359,13 @@ const IndexPage = () => {
                     </Heading>
                     {renderSocialMediaButtons(
                       "kirolos-youssef-850504131",
-                      "fluff905"
+                      "kiro358"
                     )}
                   </Flex>
                   <Flex>
                     <Text fontSize="md" color="white">
-                      Hey I’m Kiro a Computer Engineer in the making, Passionate
-                      about Cryptocurrency and advancements in AI. I’m excited
+                      Hey I’m Kiro a Computer Engineer in the making, passionate
+                      about cryptocurrency and advancements in AI. I’m excited
                       for RU Hackerz because I look forward to meeting
                       like-minded individuals that are looking to grow and share
                       similar interests.
@@ -380,7 +381,7 @@ const IndexPage = () => {
                 mt={["15%", "10%", "5%", "0%", "0%"]}
                 id="marvy-profile"
                 ml="auto"
-                w="70%"
+                w={["95%", "85%", "80%", "75%", "70%"]}
                 flexDir="column"
               >
                 <Box>

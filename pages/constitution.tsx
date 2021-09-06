@@ -17,17 +17,18 @@ import sendMail from "../helpers/mailTo";
 
 const Constitution = () => {
   return (
-    <Center
+    <Flex
+      flexDir="column"
       bgImage={backgroundImg.src}
       backgroundPosition="center"
       bgSize="cover"
       backgroundRepeat="no-repeat"
       bgAttachment="fixed"
       pt={10}
-      h="100vh"
-      flexDir="column"
+      h="100%"
+      w={["150vw", "120vw", "115vw", "110vw", "100vw"]}
     >
-      <Box w="100%" pl={10}>
+      <Box w="100%" h="100%" pl={10}>
         <Button
           bg="transparent"
           _hover={{ bg: "transparent" }}
@@ -40,14 +41,28 @@ const Constitution = () => {
           </Link>
         </Button>
       </Box>
-      <Flex p={5} gridGap="20" id="body" justifyContent="space-between">
-        <Box w="50%" id="constitution">
+      <Box
+        display={["box", "box", "box", "flex", "flex"]}
+        w="100%"
+        // h={["1100px", "970px", "950px", "920px", "900px"]}
+        h="100%"
+        p={20}
+        id="body"
+      >
+        {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
+        <Center flexDir="column" w="100vw" id="constitution">
           <object
             data="https://www.keepandshare.com/doc2/120148/ru-hackerz-constitution-pdf-63k?da=y"
             type="application/pdf"
             width="500"
-            height="620"
-          />
+            height="700"
+          >
+            <iframe
+              src="https://www.keepandshare.com/doc2/120148/ru-hackerz-constitution-pdf-63k?da=y"
+              width="500"
+              height="700"
+            ></iframe>
+          </object>
           <Center>
             <Heading
               mt={3}
@@ -58,15 +73,21 @@ const Constitution = () => {
               Constitution
             </Heading>
           </Center>
-        </Box>
-
-        <Box w="50%" id="activity-sheet">
+        </Center>
+        {/* FIXME:FIXME:FXIME:FIXME:FIXME:FIXME:FIXME: */}
+        <Center flexDir="column" w="100%" id="activity-sheet">
           <object
             data="http://www.keepandshare.com/doc2/view.php?id=120150&da=y"
             type="application/pdf"
             width="500"
-            height="620"
-          />
+            height="700"
+          >
+            <iframe
+              src="http://www.keepandshare.com/doc2/view.php?id=120150&da=y"
+              width="500"
+              height="700"
+            ></iframe>
+          </object>
           <Center>
             <Heading
               mt={3}
@@ -77,9 +98,10 @@ const Constitution = () => {
               Activity sheet
             </Heading>
           </Center>
-        </Box>
-      </Flex>
-      <Box w="100%" h="100%" id="footer" bg="gray.900">
+        </Center>
+        {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
+      </Box>
+      <Box w="100%" h="100px" id="footer" bg="red.900">
         <Center h="100%">
           <Flex gridGap="10">
             <Box _hover={{ cursor: "pointer" }} onClick={sendMail}>
@@ -97,7 +119,7 @@ const Constitution = () => {
           </Flex>
         </Center>
       </Box>
-    </Center>
+    </Flex>
   );
 };
 export default Constitution;
