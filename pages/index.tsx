@@ -385,6 +385,7 @@ const IndexPage = () => {
         <Fade bottom>
           <Center h="50vh" id="sign-up">
             <Button
+              _focus={{ outline: "none" }}
               size="lg"
               colorScheme="orange"
               fontSize={["215%", "200%", "190%", "182.5%", "175%"]}

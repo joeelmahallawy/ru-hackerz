@@ -1,5 +1,3 @@
-import { layout } from "@chakra-ui/react";
-import title from "next/head";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
 
@@ -13,8 +11,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <title>RU Hackerz</title> */}
-
           <link
             rel="icon"
             sizes="16x16"
