@@ -101,7 +101,7 @@ const Constitution = () => {
         </Center>
         {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
       </Box>
-      <Box w="100%" h="100px" id="footer" bg="red.900">
+      <Box w="100%" h="100px" id="footer" bg="gray.900">
         <Center h="100%">
           <Flex gridGap="10">
             <Box _hover={{ cursor: "pointer" }} onClick={sendMail}>
