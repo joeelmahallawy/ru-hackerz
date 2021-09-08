@@ -49,7 +49,6 @@ const Constitution = () => {
         p={20}
         id="body"
       >
-        {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
         <Center flexDir="column" w="100vw" id="constitution">
           <object
             data="https://www.keepandshare.com/doc2/120148/ru-hackerz-constitution-pdf-63k?da=y"
@@ -74,7 +73,7 @@ const Constitution = () => {
             </Heading>
           </Center>
         </Center>
-        {/* FIXME:FIXME:FXIME:FIXME:FIXME:FIXME:FIXME: */}
+
         <Center flexDir="column" w="100%" id="activity-sheet">
           <object
             data="https://www.keepandshare.com/doc2/120150/ru-hackerz-activity-sheet-pdf-70k?da=y"
@@ -99,7 +98,6 @@ const Constitution = () => {
             </Heading>
           </Center>
         </Center>
-        {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
       </Box>
       <Box w="100%" h="100px" id="footer" bg="gray.900">
         <Center h="100%">
