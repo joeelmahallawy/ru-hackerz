@@ -60,6 +60,7 @@ const Constitution = () => {
               src="https://www.keepandshare.com/doc2/120148/ru-hackerz-constitution-pdf-63k?da=y"
               width="500"
               height="700"
+              scrolling="yes"
             ></iframe>
           </object>
           <Center>
