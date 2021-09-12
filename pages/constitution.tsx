@@ -76,15 +76,16 @@ const Constitution = () => {
 
         <Center flexDir="column" w="100%" id="activity-sheet">
           <object
-            data="http://www.keepandshare.com/doc2/view.php?id=120191&da=y"
+            data="https://www.keepandshare.com/doc2/120191/ru-hackerz-activity-sheet-pdf-69k?ifr=y&da=y"
             type="application/pdf"
             width="500"
             height="700"
           >
             <iframe
-              src="http://www.keepandshare.com/doc2/view.php?id=120191&da=y"
+              src="https://www.keepandshare.com/doc2/120191/ru-hackerz-activity-sheet-pdf-69k?ifr=y&da=y"
               width="500"
               height="700"
+              scrolling="yes"
             ></iframe>
           </object>
           <Center>
