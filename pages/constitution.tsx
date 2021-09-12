@@ -76,13 +76,13 @@ const Constitution = () => {
 
         <Center flexDir="column" w="100%" id="activity-sheet">
           <object
-            data="https://www.keepandshare.com/doc2/120150/ru-hackerz-activity-sheet-pdf-70k?da=y"
+            data="http://www.keepandshare.com/doc2/view.php?id=120191&da=y"
             type="application/pdf"
             width="500"
             height="700"
           >
             <iframe
-              src="https://www.keepandshare.com/doc2/120150/ru-hackerz-activity-sheet-pdf-70k?da=y"
+              src="http://www.keepandshare.com/doc2/view.php?id=120191&da=y"
               width="500"
               height="700"
             ></iframe>
