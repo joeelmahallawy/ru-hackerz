@@ -420,27 +420,35 @@ const IndexPage = () => {
         </Center>
         <Fade bottom>
           <Center h="50vh" id="sign-up">
-            <Button
-              _focus={{ outline: "none" }}
-              size="lg"
-              colorScheme="orange"
+            <Link
+              color="white"
+              as="button"
               fontSize={["205%", "200%", "190%", "182.5%", "175%"]}
-              p={["4%", "4%", "3.5%", "3%", "2%"]}
+              borderRadius="10px"
+              p={["3.5%", "3%", "3%", "2%", "1%"]}
+              size="lg"
+              bg="orange.600"
+              _focus={{ outline: "none" }}
               _hover={{
-                p: ["4.5%", "4.25%", "3.75%", "3.25%", "2.25%"],
+                borderBottom: "0px",
+                p: ["3.75%", "3.25%", "3.25%", "2.25%", "1.25%"],
                 fontSize: ["225%", "210%", "200%", "192.5%", "185%"],
                 bg: "orange.600",
               }}
+              isExternal={true}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe33qTD56JENzFOfXbLgpuytILTjabY0ZF5UTcPcagr6nOmwQ/viewform"
             >
-              <Link
-                _hover={{ borderBottom: "0px" }}
-                _focus={{ outline: "none" }}
-                isExternal={true}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe33qTD56JENzFOfXbLgpuytILTjabY0ZF5UTcPcagr6nOmwQ/viewform"
+              {/* <Button
+                w="100%"
+                h="100%"
+                // _focus={{ outline: "none" }}
+                // size="lg"
+                colorScheme="orange"
               >
                 Sign up!
-              </Link>
-            </Button>
+</Button>  */}
+              Sign up!
+            </Link>
           </Center>
         </Fade>
 
