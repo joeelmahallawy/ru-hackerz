@@ -273,7 +273,7 @@ const IndexPage = () => {
               </Center>
             </Box>
           </Roll>
-          {/* FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME:FIXME: */}
+          {/* 
           <Roll right>
             <Box
               display={["block", "block", "block", "flex", "flex"]}
@@ -319,7 +319,7 @@ const IndexPage = () => {
                 <Image src={YasminDP.src} />
               </Center>
             </Box>
-          </Roll>
+          </Roll> */}
         </Box>
         {/* FIXME:FIXME: */}
         {/* FIXME:FIXME: */}
