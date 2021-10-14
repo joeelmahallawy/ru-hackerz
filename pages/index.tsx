@@ -436,9 +436,9 @@ const IndexPage = () => {
                 _hover={{ borderBottom: "0px" }}
                 _focus={{ outline: "none" }}
                 isExternal={true}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe33qTD56JENzFOfXbLgpuytILTjabY0ZF5UTcPcagr6nOmwQ/viewform"
+                href="https://discord.gg/Wy8rhFWU"
               >
-                Sign up!
+                Join the discord!
               </Link>
             </Button>
           </Center>
